@@ -1,40 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Project: Rock Paper Scissors</title>
-  </head>
-  <body>
-    <div class="contaier-label">
-      <h1>Pick your weapon</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem officia non fuga ea, omnis magnam!</p>
-      </p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Project: Rock Paper Scissors</title>
+</head>
+
+<body>
+  <div class="contaier-label">
+    <h1>Pick your weapon</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem officia non fuga ea, omnis magnam!</p>
+    </p>
+  </div>
+  <div class="container">
+    <div class="option rock">
+      <div>
+        <img src="images/rock.png" alt="rock">
+      </div>
+      <p>Rock</p>
     </div>
-    <div class="container_PC">
-      <div class="option rock">
-        <div>
-          <img src="images/rock.png" alt="rock">
-        </div>
-          <p>Rock</p>
+    <div class="option paper">
+      <div>
+        <img src="images/paper.png" alt="paper">
       </div>
-       <div class="option paper">
-        <div>
-          <img src="images/paper.png" alt="paper">
-        </div>
-          <p>Paper</p>
-      </div>
-       <div class="option scissor">
-        <div>
-          <img src="images/scissor.png" alt="scissor">
-        </div>
-          <p>Scissor</p>
-      </div>
-  
-  
+      <p>Paper</p>
     </div>
-    <script src="script.js"></script>
-  </body>
+    <div class="option scissor">
+      <div>
+        <img src="images/scissor.png" alt="scissor">
+      </div>
+      <p>Scissor</p>
+    </div>
+  </div>
+  <div class="media-ipad">
+  <div class="container_score computer">
+    <div class="score">
+      <p>0</p>
+      <div class="avatar" id="computer">
+        <img src="./images/computer.png" alt="avatar">
+      </div>
+    </div>
+  </div>
+  <div class="playerBid" id="computerBid">
+    <div class="playerOption">
+      <img src="images/rock.png" alt="">
+    </div>
+    <p>Rock</p>
+  </div>
+  </div>
+  <div class="media-ipad">
+  <div class="playerBid" id="yourBid">
+    <div class="playerOption">
+      <img src="images/paper.png" alt="">
+    </div>
+    <p>Paper</p>
+  </div>
+  <div class="container_score you" >
+    <div class="score">
+      <p>0</p>
+      <div class="avatar" id="you">
+        <img src="./images/you.png" alt="avatar">
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="container">
+    <div class="option rock">
+      <div>
+        <img src="images/rock.png" alt="rock">
+      </div>
+      <p>Rock</p>
+    </div>
+    <div class="option paper">
+      <div>
+        <img src="images/paper.png" alt="paper">
+      </div>
+      <p>Paper</p>
+    </div>
+    <div class="option scissor">
+      <div>
+        <img src="images/scissor.png" alt="scissor">
+      </div>
+      <p>Scissor</p>
+    </div>
+  </div>
+  <footer>
+    <p>Copyright &copy; 2022 Lance Valle</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
 </html>

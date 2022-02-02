@@ -17,7 +17,9 @@
 body {
   background-color: var(--quaternary);
   display: flex;
+  height: 100vh;
   flex-direction: column;
+  justify-content: center;
 }
 .contaier-label {
   display: flex;
@@ -35,19 +37,19 @@ p {
   color: #ffffff;
 }
 
-.container_PC {
+.container {
   display: flex;
   width: 90%;
-  border: 1px solid black;
   justify-content: space-between;
   margin: 5px auto;
 }
 
 img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  object-fit: cover;
 }
-.container_PC .option {
+.container .option {
   background-color: var(--primary);
   width: 89px;
   height: 100px;
@@ -61,7 +63,6 @@ img {
   height: 68px;
   width: 67px;
   margin: 4px auto;
-  border: violet;
 }
 .option p {
   font-style: normal;
@@ -70,4 +71,202 @@ img {
   line-height: 21px;
   color: var(--primaryText);
   text-transform: uppercase;
+}
+
+/* container score */
+.container_score {
+  width: 123px;
+  height: 100px;
+  background-color: var(--primary);
+  margin: auto;
+  border: 2px solid black;
+}
+
+.container_score p {
+  width: 123px;
+  height: 97px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primaryText);
+}
+
+.container_score .avatar {
+  position: relative;
+
+  width: 71px;
+  height: 71px;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  margin: 0 auto;
+  border: 2px solid black;
+}
+
+.score p {
+  width: 123px;
+  height: 97px;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 75px;
+}
+
+.avatar#computer {
+  left: 65px;
+  top: -65px;
+}
+
+.avatar#you {
+  left: -65px;
+  top: -100px;
+}
+
+.playerBid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 169px;
+  height: 100px;
+  border: 1px solid black;
+  margin: 5px auto;
+  border-radius: 50px;
+  background-color: var(--secondary);
+}
+
+.playerBid .playerOption {
+  width: 69px;
+  height: 67px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+  background-color: var(--primaryTextary);
+}
+
+@media only screen and (min-width: 390px) {
+  body {
+    width: 390px;
+    margin: auto;
+  }
+}
+
+/* If the screen size is 1024px or more, /* iPad Pro 12.9" - 1 */
+@media only screen and (min-width: 1024px) {
+  body {
+    width: 1024px;
+    margin: auto;
+  }
+  .container .option {
+    width: 236px;
+    height: 200px;
+    justify-content: space-between;
+  }
+
+  .option div {
+    width: 160px;
+    height: 168.58px;
+  }
+
+  .option p {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .media-ipad {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .playerBid {
+    width: 362px;
+    height: 150px;
+    border-radius: 116.5px;
+    justify-content: space-around;
+    position: relative;
+  }
+
+  .playerBid .playerOption {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+
+  .playerBid p {
+    width: 89px;
+    height: 27px;
+    margin-bottom: 5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+  }
+
+  .container_score {
+    width: 193px;
+    height: 177px;
+  }
+
+  .score p {
+    width: 193px;
+    height: 177px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    line-height: 75px;
+    color: var(--primaryText);
+  }
+
+  .score .avatar {
+    width: 135px;
+    height: 129px;
+  }
+  .avatar#computer {
+    left: -80px;
+    top: -80px;
+  }
+
+  .avatar#you {
+    left: 80px;
+    top: -220px;
+  }
+
+  #computerBid {
+    left: 21%;
+  }
+  #yourBid {
+    right: 21%;
+  }
+
+  .container_score.you {
+    position: relative;
+    right: 6.5%;
+  }
+
+  .container_score.computer {
+    position: relative;
+    left: 6.5%;
+  }
+
+  footer {
+    width: 100%;
+    height: 100px;
+    background-color: var(--primaryTextary);
+  }
+}
+
+/* If the screen size is 
+1980px or less, /* Desktop 12.9" - 1 */
+@media only screen and (max-width: 1980px) {
+  div.example {
+    font-size: 30px;
+  }
 }
