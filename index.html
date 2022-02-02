@@ -12,23 +12,23 @@
 <body>
   <div class="contaier-label">
     <h1>Pick your weapon</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem officia non fuga ea, omnis magnam!</p>
+    <p>Best of 5! goodLuck</p>
     </p>
   </div>
   <div class="container">
-    <div class="option rock">
+    <div class="option rock" id="computer_Rock">
       <div>
         <img src="images/rock.png" alt="rock">
       </div>
       <p>Rock</p>
     </div>
-    <div class="option paper">
+    <div class="option paper" id="computer_Paper">
       <div>
-        <img src="images/paper.png" alt="paper">
+        <img class="rotate" src="images/paper.png" alt="paper">
       </div>
       <p>Paper</p>
     </div>
-    <div class="option scissor">
+    <div class="option scissor" id="computer_Scissor">
       <div>
         <img src="images/scissor.png" alt="scissor">
       </div>
@@ -38,15 +38,15 @@
   <div class="media-ipad">
   <div class="container_score computer">
     <div class="score">
-      <p>0</p>
+      <p id="computerScore" >0</p>
       <div class="avatar" id="computer">
-        <img src="./images/computer.png" alt="avatar">
+        <img src="./images/computer.png" alt="avatar" >
       </div>
     </div>
   </div>
   <div class="playerBid" id="computerBid">
     <div class="playerOption">
-      <img src="images/rock.png" alt="">
+      <img src="images/rock.png" alt="computerChoice"id="computerChoice">
     </div>
     <p>Rock</p>
   </div>
@@ -54,35 +54,35 @@
   <div class="media-ipad">
   <div class="playerBid" id="yourBid">
     <div class="playerOption">
-      <img src="images/paper.png" alt="">
+      <img src="images/paper.png" alt="yourChoice" id="yourChoice">
     </div>
     <p>Paper</p>
   </div>
   <div class="container_score you" >
     <div class="score">
-      <p>0</p>
+      <p id="playerScore">0</p>
       <div class="avatar" id="you">
-        <img src="./images/you.png" alt="avatar">
+        <img class="flip" src="./images/you.png" alt="avatar" >
       </div>
     </div>
   </div>
   </div>
   <div class="container">
-    <div class="option rock">
+    <div class="option rock" id="you_Rock" value='rock'>
       <div>
-        <img src="images/rock.png" alt="rock">
+        <img src="images/rock.png" alt="rock" >
       </div>
-      <p>Rock</p>
+      <p>Rockr</p>
     </div>
-    <div class="option paper">
+    <div class="option paper" id="you_Paper" value='paper'>
       <div>
         <img src="images/paper.png" alt="paper">
       </div>
       <p>Paper</p>
     </div>
-    <div class="option scissor">
+    <div class="option scissor" id="you_Scissor"> 
       <div>
-        <img src="images/scissor.png" alt="scissor">
+        <img class="rotate" src="images/scissor.png" alt="scissor">
       </div>
       <p>Scissor</p>
     </div>
