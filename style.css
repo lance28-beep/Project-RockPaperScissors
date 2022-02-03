@@ -266,6 +266,18 @@ div.score {
     width: 390px;
     margin: auto;
   }
+  .modal-message {
+    height: 200px;
+    border: none;
+  }
+  .modal-message h1 {
+    font-size: 1em;
+    text-transform: uppercase;
+  }
+
+  .modal-score {
+    width: 300px;
+  }
 }
 
 /* If the screen size is 1024px or more, /* iPad Pro 12.9" - 1 */
@@ -273,6 +285,11 @@ div.score {
   body {
     width: 1024px;
     margin: auto;
+  }
+
+  .modal-message h1 {
+    font-size: 2em;
+    text-transform: uppercase;
   }
   .container .option {
     width: 236px;
