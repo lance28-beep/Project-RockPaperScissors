@@ -225,8 +225,8 @@ img {
 }
 
 .avatar#you {
-  left: -95px;
-  top: -65px;
+  left: -50px;
+  top: -100px;
 }
 
 .playerBid {
@@ -362,7 +362,7 @@ div.score {
   }
 
   .avatar#you {
-    left: 80px;
+    left: 120px;
     top: -220px;
   }
 
