@@ -10,6 +10,12 @@ const you_Rock = document.querySelector('#you_Rock')
 const you_Scissors = document.querySelector('#you_Scissors')
 const you_Paper = document.querySelector('#you_Paper')
 
+const modal = document.querySelector('.modal')
+const modalComputer = document.querySelector('.result #computer')
+const modalPlayer = document.querySelector('.result #player')
+const modalLabel = document.querySelector('.modal-message h1')
+const modalButton = document.querySelector('#play-again')
+
 //computer label
 const h1 = document.querySelector('.contaier-label h1')
 const p = document.querySelector('.contaier-label p')
@@ -26,7 +32,6 @@ function computerChoice() {
   document.querySelector('#computerBid p').innerHTML = `${x}`
   return x
 }
-
 you_Paper.addEventListener('click', function () {
   round++
   console.log(round)
@@ -37,7 +42,6 @@ you_Paper.addEventListener('click', function () {
   document.getElementById('yourChoice').className = 'flip'
   document.querySelector('#yourBid p').innerHTML = 'PAPER'
 })
-
 you_Rock.addEventListener('click', function () {
   round++
   console.log(round)
@@ -48,7 +52,6 @@ you_Rock.addEventListener('click', function () {
   document.getElementById('yourChoice').className = 'rotate'
   document.querySelector('#yourBid p').innerHTML = 'ROCK'
 })
-
 you_Scissor.addEventListener('click', function () {
   round++
   console.log(round)
@@ -59,10 +62,8 @@ you_Scissor.addEventListener('click', function () {
   document.getElementById('yourChoice').className = 'rotate'
   document.querySelector('#yourBid p').innerHTML = 'SCISSOR'
 })
-
 //create a variable to player choices
 //create a function that will compare the player and computer choices and return a string
-
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
     console.log('tie')
@@ -103,11 +104,25 @@ function playRound(playerSelection, computerSelection) {
   } else {
     p.textContent = ` ${playerSelection} VS.${computerSelection}`
   }
-
-  if (round === 5 || youScore > comScore) {
-    h1.innerText = `Game Over ${
+  //if one of the player wins 5 rounds, the game will end
+  if (youScore === 5 || comScore === 5) {
+    modal.style.display = 'block'
+    modalLabel.innerText = `${
       youScore > comScore ? 'you won' : 'the computer won'
     }`
-    p.innerText = `you scored ${youScore} and the computer scored ${comScore}`
+    modalComputer.innerText = `${comScore}`
+    modalPlayer.innerText = `${youScore}`
   }
 }
+
+//create a function that will reset the game
+function resetGame() {
+  youScore = 0
+  comScore = 0
+  round = 0
+  modal.style.display = 'none'
+  playerScore.innerHTML = youScore
+  computerScore.innerHTML = comScore
+}
+
+modalButton.addEventListener('click', resetGame)
